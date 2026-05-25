@@ -1,0 +1,285 @@
+@import "tailwindcss" source("../");
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital@1&display=swap');
+
+:root {
+  --color-paper: #FAF9F6;
+  --color-ink: #1C1B18;
+  --color-taupe: #8B7355;
+  --color-sand: #E8E2D9;
+  --color-mist: #F2EFE9;
+  --color-smoke: #9B9490;
+  --color-rouge: #C4513A;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-accent: 'Playfair Display', Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-mist);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-taupe);
+}
+
+/* Utility classes */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-accent {
+  font-family: var(--font-accent);
+}
+
+.color-taupe {
+  color: var(--color-taupe);
+}
+
+.color-smoke {
+  color: var(--color-smoke);
+}
+
+.bg-sand {
+  background-color: var(--color-sand);
+}
+
+.bg-mist {
+  background-color: var(--color-mist);
+}
+
+.bg-ink {
+  background-color: var(--color-ink);
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.animate-delay-1 {
+  animation-delay: 0.15s;
+  opacity: 0;
+}
+
+.animate-delay-2 {
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+.animate-delay-3 {
+  animation-delay: 0.45s;
+  opacity: 0;
+}
+
+.animate-delay-4 {
+  animation-delay: 0.6s;
+  opacity: 0;
+}
+
+.animate-delay-5 {
+  animation-delay: 0.75s;
+  opacity: 0;
+}
+
+.marquee-track {
+  display: flex;
+  animation: marquee 30s linear infinite;
+  white-space: nowrap;
+}
+
+/* Image hover effect */
+.img-hover-zoom {
+  overflow: hidden;
+}
+
+.img-hover-zoom img {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.img-hover-zoom:hover img {
+  transform: scale(1.04);
+}
+
+/* Divider line animation */
+.rule-animate {
+  display: block;
+  height: 1px;
+  background: var(--color-taupe);
+  transform-origin: left;
+  animation: slideRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+
+/* Card hover */
+.editorial-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Link underline effect */
+.link-underline {
+  position: relative;
+  text-decoration: none;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.link-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Film card */
+.film-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.film-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(28, 27, 24, 0.12);
+}
+
+/* Vertical text */
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+}
+
+/* Hero overlay gradient */
+.hero-gradient {
+  background: linear-gradient(to right,
+      var(--color-paper) 0%,
+      var(--color-paper) 20px,
+      transparent 100%);
+}
+
+@media (max-width: 768px) {
+  .hero-gradient {
+    background: linear-gradient(to top,
+        var(--color-paper) 0%,
+        var(--color-paper) 40%,
+        rgba(250, 249, 246, 0.6) 70%,
+        transparent 100%);
+  }
+}
+
+/* Newsletter input */
+.newsletter-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-smoke);
+  outline: none;
+  padding: 12px 0;
+  font-family: var(--font-body);
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  color: var(--color-ink);
+  transition: border-color 0.3s ease;
+  width: 100%;
+}
+
+.newsletter-input::placeholder {
+  color: var(--color-smoke);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.newsletter-input:focus {
+  border-bottom-color: var(--color-taupe);
+}
+
+/* Category label */
+.category-label {
+  font-family: var(--font-body);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-taupe);
+}
+
+/* Issue number style */
+.issue-number {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--color-smoke);
+}
