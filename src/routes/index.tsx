@@ -61,7 +61,7 @@ function NavBar() {
     <header className="sticky top-0 z-50" style={{ backgroundColor: 'var(--color-paper)' }}>
       <div className="border-b" style={{ borderColor: 'var(--color-sand)' }}>
         <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
-          <span className="category-label">Edição Maio 2025</span>
+          <span className="category-label">Edição Maio 2026</span>
           <div className="flex gap-6">
             {['Tendências', 'Editoriais', 'Filmes', 'Newsletter'].map((item) => (
               <a key={item} href={`#${item.toLowerCase()}`} className="link-underline category-label hover:text-[var(--color-ink)] transition-colors cursor-pointer">
@@ -174,7 +174,7 @@ function Hero() {
               className="issue-number"
               style={{ fontSize: '13px' }}
             >
-              Vol. XII, Maio 2025
+              Vol. XII, Maio 2026
             </span>
           </div>
         </div>
@@ -189,7 +189,7 @@ function Hero() {
           className="vertical-text category-label"
           style={{ color: 'var(--color-paper)' }}
         >
-          Primavera — Verão 2025
+          Primavera — Verão 2026
         </span>
       </div>
     </section>
@@ -671,7 +671,7 @@ function Footer() {
           style={{ borderTop: '1px solid rgba(255,255,255,0.1)' }}
         >
           <span style={{ fontFamily: 'var(--font-body)', fontSize: 11, color: 'rgba(250,249,246,0.3)', letterSpacing: '0.05em' }}>
-            © 2025 MAISON — Portal Editorial de Moda
+            © 2026 MAISON — Portal Editorial de Moda
           </span>
           <div className="flex gap-6">
             {['Privacidade', 'Termos', 'Cookies'].map((item) => (
