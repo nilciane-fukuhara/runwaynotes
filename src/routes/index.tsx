@@ -492,7 +492,7 @@ function FilmsSection() {
           >
             Cinema &
             <br />
-            <em style={{ color: 'var(--color-taupe)' }}>Universo Fashion</em>
+            <em style={{ color: 'var(--color-taupe)' }}>TESTE Fashion</em>
           </h2>
         </div>
         <p
