@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev --port 3000",
-    "build": "vite build"
+    "build": "vite build",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@tailwindcss/vite": "4.2.2",
@@ -25,8 +26,9 @@
   "devDependencies": {
     "@content-collections/core": "0.13.1",
     "@content-collections/vite": "0.2.9",
+    "@playwright/test": "^1.60.0",
     "@tailwindcss/vite": "4.2.2",
-    "@types/node": "22.19.19",
+    "@types/node": "^22.19.19",
     "@types/react": "19.2.15",
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "5.2.0",
