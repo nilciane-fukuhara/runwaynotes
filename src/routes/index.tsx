@@ -61,7 +61,7 @@ function NavBar() {
     <header className="sticky top-0 z-50" style={{ backgroundColor: 'var(--color-paper)' }}>
       <div className="border-b" style={{ borderColor: 'var(--color-sand)' }}>
         <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
-          <span className="category-label">Edição Maio 2026</span>
+          <span className="category-label">Edição Maio 2028</span>
           <div className="flex gap-6">
             {['Tendências', 'Editoriais', 'Filmes', 'Newsletter'].map((item) => (
               <a key={item} href={`#${item.toLowerCase()}`} className="link-underline category-label hover:text-[var(--color-ink)] transition-colors cursor-pointer">
